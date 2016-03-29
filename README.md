@@ -1,6 +1,6 @@
-== Bash color
+# Bash color
 
-=== Available colors
+## Available colors
 
 * BLACK
 * RED
@@ -21,7 +21,7 @@
 * LIGHT_CYAN
 * WHITE
 
-=== Available effect
+## Available effect
 
 * BOLD
 * DIM  # not working on Konsole
@@ -30,7 +30,7 @@
 * INVERSE
 * HIDDEN  # not working on Konsole
 
-=== Example
+## Example
 
 ```python
 from bash import colorize, RED, UNDERLINE
@@ -40,8 +40,15 @@ print(colorize('Red background', background=RED))
 print(colorize('Underline', effect=UNDERLINE))
 ```
 
-=== API
+## API
 
- ``python
-def colorize(text, color=None, background=None, effects=[], color_256=None, background_256=None, with_end=True):
+```python
+def colorize(
+    text,
+    color=None,
+    background=None,
+    effects=[],
+    color_256=None,
+    background_256=None,
+    with_end=True):
 ```
