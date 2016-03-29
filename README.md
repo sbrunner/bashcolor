@@ -24,11 +24,11 @@
 ## Available effect
 
 * BOLD
-* DIM  # not working on Konsole
+* DIM  (not working on Konsole)
 * UNDERLINE
-* BLINK  # not working on Konsole and gnome Terminal
+* BLINK  (not working on Konsole and Gnome Terminal)
 * INVERSE
-* HIDDEN  # not working on Konsole
+* HIDDEN  (not working on Konsole)
 
 ## Example
 
