@@ -36,7 +36,10 @@ _BACKGROUND = 10
 _RESET_EFFECT = 10
 
 
-def colorize(text, color=None, background=None, effects=[], color_256=None, background_256=None, with_end=True):
+def colorize(
+    text, color=None, background=None, effects=[],
+    color_256=None, background_256=None, with_end=True
+):
     start = []
     end = []
 
