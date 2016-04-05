@@ -33,7 +33,7 @@ HIDDEN = 8  # not working on Konsole
 _ESC = '\033'
 _ESC = '\x1b'
 _BACKGROUND = 10
-_RESET_EFFECT = 10
+_RESET_EFFECT = 20
 
 
 def colorize(
