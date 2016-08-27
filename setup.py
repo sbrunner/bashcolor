@@ -20,7 +20,7 @@ tests_require = install_requires + [
 
 setup(
     name="bashcolor",
-    version="1.0.0",
+    version="1.0.1",
     description="A simple library to get colors in the bash terminal",
     long_description=README,
     classifiers=[
