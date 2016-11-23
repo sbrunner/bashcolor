@@ -37,9 +37,11 @@ _RESET_EFFECT = 20
 
 
 def colorize(
-    text, color=None, background=None, effects=[],
+    text, color=None, background=None, effects=None,
     color_256=None, background_256=None, with_end=True
 ):
+    if effects is None:
+        effects = []
     start = []
     end = []
 
