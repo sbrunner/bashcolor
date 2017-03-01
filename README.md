@@ -32,11 +32,11 @@
 ## Example
 
 ```python
-from bash import colorize, RED, UNDERLINE
+from bashcolor import colorize, RED, UNDERLINE
 
 print(colorize('Red color', RED))
 print(colorize('Red background', background=RED))
-print(colorize('Underline', effect=UNDERLINE))
+print(colorize('Underline', effects=[UNDERLINE]))
 ```
 
 ## API
