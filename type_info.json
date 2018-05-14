@@ -1,0 +1,21 @@
+[
+    {
+        "path": "bashcolor/__init__.py",
+        "samples": 10,
+        "type_comments": [
+            "(str, None, int, List, None, None, bool) -> str",
+            "(str, None, None, List, None, int, bool) -> str"
+        ],
+        "func_name": "colorize",
+        "line": 39
+    },
+    {
+        "path": "bashcolor/__init__.py",
+        "samples": 1,
+        "type_comments": [
+            "() -> None"
+        ],
+        "func_name": "print_colors",
+        "line": 69
+    }
+]
