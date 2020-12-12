@@ -2,21 +2,16 @@
 
 import os
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 here = os.path.abspath(os.path.dirname(__file__))
-README = (
-    open(os.path.join(here, 'README.md')).read()
-)
+README = open(os.path.join(here, "README.md")).read()
 
-install_requires = [
-]
+install_requires = []
 
-setup_requires = [
-]
+setup_requires = []
 
-tests_require = install_requires + [
-]
+tests_require = install_requires + []
 
 setup(
     name="bashcolor",
@@ -39,5 +34,5 @@ setup(
         "console_scripts": [
             "print_colors = bashcolor:print_colors",
         ],
-    }
+    },
 )

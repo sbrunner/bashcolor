@@ -32,7 +32,7 @@
 ## Example
 
 ```python
-from bashcolor import colorize, RED, UNDERLINE
+from bashcolor import RED, UNDERLINE, colorize
 
 print(colorize('Red color', RED))
 print(colorize('Red background', background=RED))

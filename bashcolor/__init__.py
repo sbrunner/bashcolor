@@ -30,15 +30,14 @@ BLINK = 5  # not working on Konsole and gnome Terminal
 INVERSE = 7
 HIDDEN = 8  # not working on Konsole
 
-_ESC = '\033'
-_ESC = '\x1b'
+_ESC = "\033"
+_ESC = "\x1b"
 _BACKGROUND = 10
 _RESET_EFFECT = 20
 
 
 def colorize(
-    text, color=None, background=None, effects=None,
-    color_256=None, background_256=None, with_end=True
+    text, color=None, background=None, effects=None, color_256=None, background_256=None, with_end=True
 ):
     if effects is None:
         effects = []
@@ -63,8 +62,8 @@ def colorize(
         start.append(effect)
         end.append(effect + _RESET_EFFECT)
 
-    start_code = "{0!s}[{1!s}m".format(_ESC, ';'.join([str(s) for s in start])) if text != '' else ''
-    end_code = "{0!s}[{1!s}m".format(_ESC, ';'.join([str(e) for e in end])) if with_end else ''
+    start_code = "{0!s}[{1!s}m".format(_ESC, ";".join([str(s) for s in start])) if text != "" else ""
+    end_code = "{0!s}[{1!s}m".format(_ESC, ";".join([str(e) for e in end])) if with_end else ""
     return "{0!s}{1!s}{2!s}".format(start_code, text, end_code)
 
 
@@ -77,12 +76,12 @@ def print_colors():
     color_table = [range(cs, ce) for cs, ce in zip(color_pivot_start, color_pivot_end)]
 
     for ct in color_table:
-        text = ''
+        text = ""
         for c in ct:
             cs = str(c)
-            padding = ''.join([' ' for e in range(3 - len(cs))])
-            text += colorize(' {0!s}{1!s} '.format(padding, cs), background_256=c, with_end=False)
-        print(text + colorize('', background=DEFAULT))
+            padding = "".join([" " for e in range(3 - len(cs))])
+            text += colorize(" {0!s}{1!s} ".format(padding, cs), background_256=c, with_end=False)
+        print(text + colorize("", background=DEFAULT))
 
 
 if __name__ == "__main__":
