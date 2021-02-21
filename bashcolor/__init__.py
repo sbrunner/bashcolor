@@ -62,9 +62,9 @@ def colorize(
         start.append(effect)
         end.append(effect + _RESET_EFFECT)
 
-    start_code = "{0!s}[{1!s}m".format(_ESC, ";".join([str(s) for s in start])) if text != "" else ""
-    end_code = "{0!s}[{1!s}m".format(_ESC, ";".join([str(e) for e in end])) if with_end else ""
-    return "{0!s}{1!s}{2!s}".format(start_code, text, end_code)
+    start_code = f"{_ESC!s}[{';'.join([str(s) for s in start])!s}m" if text != "" else ""
+    end_code = f"{_ESC!s}[{';'.join([str(e) for e in end])!s}m" if with_end else ""
+    return f"{start_code!s}{text!s}{end_code!s}"
 
 
 def print_colors():
@@ -80,7 +80,7 @@ def print_colors():
         for c in ct:
             cs = str(c)
             padding = "".join([" " for e in range(3 - len(cs))])
-            text += colorize(" {0!s}{1!s} ".format(padding, cs), background_256=c, with_end=False)
+            text += colorize(f" {padding!s}{cs!s} ", background_256=c, with_end=False)
         print(text + colorize("", background=DEFAULT))
 
 
