@@ -3,9 +3,7 @@ name: Build
 
 on:
   push:
-
-env:
-  IN_CI: '1'
+  pull_request:
 
 jobs:
   build:
