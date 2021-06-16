@@ -17,7 +17,14 @@ setup(
     description="A simple library to get colors in the bash terminal",
     long_description=README,
     classifiers=[
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: BSD License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
         "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8",
+        "Typing :: Typed",
     ],
     author="Stéphane Brunner",
     author_email="stephane.brunner@gmail.com",
@@ -33,4 +40,5 @@ setup(
             "print_colors = bashcolor:print_colors",
         ],
     },
+    data={"bachcolor": ["py.typed"]},
 )
