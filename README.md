@@ -2,32 +2,32 @@
 
 ## Available colors
 
-* BLACK
-* RED
-* GREEN
-* BROWN
-* BLUE
-* PURPLE
-* CYAN
-* LIGHT_GRAY
-* DEFAULT
-* DARK_GRAY
-* LIGHT_RED
-* LIGHT_GREEN
-* YELLOW
-* LIGHT_BLUE
-* LIGHT_PURPLE
-* LIGHT_CYAN
-* WHITE
+- BLACK
+- RED
+- GREEN
+- BROWN
+- BLUE
+- PURPLE
+- CYAN
+- LIGHT_GRAY
+- DEFAULT
+- DARK_GRAY
+- LIGHT_RED
+- LIGHT_GREEN
+- YELLOW
+- LIGHT_BLUE
+- LIGHT_PURPLE
+- LIGHT_CYAN
+- WHITE
 
 ## Available effect
 
-* BOLD
-* DIM  (not working on Konsole)
-* UNDERLINE
-* BLINK  (not working on Konsole and Gnome Terminal)
-* INVERSE
-* HIDDEN  (not working on Konsole)
+- BOLD
+- DIM (not working on Konsole)
+- UNDERLINE
+- BLINK (not working on Konsole and Gnome Terminal)
+- INVERSE
+- HIDDEN (not working on Konsole)
 
 ## Example
 
