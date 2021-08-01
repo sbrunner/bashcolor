@@ -2,6 +2,7 @@ import os
 
 from setuptools import find_packages, setup
 
+VERSION = os.environ.get("VERSION", "1.0.0")
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, "README.md")).read()
 
@@ -13,7 +14,7 @@ tests_require = install_requires + []
 
 setup(
     name="bashcolor",
-    version="1.0.1",
+    version=VERSION,
     description="A simple library to get colors in the bash terminal",
     long_description=README,
     classifiers=[
