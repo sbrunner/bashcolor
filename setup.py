@@ -17,6 +17,7 @@ setup(
     version=VERSION,
     description="A simple library to get colors in the bash terminal",
     long_description=README,
+    long_description_content_type="text/markdown",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",

@@ -5,6 +5,9 @@ on:
   push:
   pull_request:
 
+env:
+  HAS_SECRETS: ${{ secrets.HAS_SECRETS }}
+
 jobs:
   build:
     name: Continuous integration
@@ -20,3 +23,14 @@ jobs:
 
       - name: Checks
         run: c2cciutils-checks
+
+      - name: Init pypi
+        run: |
+          echo "[pypi]" > ~/.pypirc
+          echo "username = sbrunner" >> ~/.pypirc
+          echo "password = ${{ secrets.PYPI_PASSWORD }}" >> ~/.pypirc
+          pip install --user wheel twine
+        if: env.HAS_SECRETS == 'HAS_SECRETS'
+      - name: Publish
+        run: c2cciutils-publish
+        if: env.HAS_SECRETS == 'HAS_SECRETS'
