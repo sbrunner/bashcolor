@@ -1,6 +1,8 @@
 # see also: http://misc.flogisoft.com/bash/tip_colors_and_formatting
 
 
+from typing import List, Optional
+
 RESET = 0
 BLACK = 30
 RED = 31
@@ -35,8 +37,14 @@ _RESET_EFFECT = 20
 
 
 def colorize(
-    text, color=None, background=None, effects=None, color_256=None, background_256=None, with_end=True
-):
+    text: str,
+    color: Optional[int] = None,
+    background: Optional[int] = None,
+    effects: Optional[List[int]] = None,
+    color_256: Optional[int] = None,
+    background_256: Optional[int] = None,
+    with_end: bool = True,
+) -> str:
     if effects is None:
         effects = []
     start = []
@@ -60,25 +68,25 @@ def colorize(
         start.append(effect)
         end.append(effect + _RESET_EFFECT)
 
-    start_code = f"{_ESC!s}[{';'.join([str(s) for s in start])!s}m" if text != "" else ""
-    end_code = f"{_ESC!s}[{';'.join([str(e) for e in end])!s}m" if with_end else ""
-    return f"{start_code!s}{text!s}{end_code!s}"
+    start_code = f"{_ESC}[{';'.join([str(s) for s in start])}m" if text != "" else ""
+    end_code = f"{_ESC}[{';'.join([str(e) for e in end])}m" if with_end else ""
+    return f"{start_code}{text}{end_code}"
 
 
-def print_colors():
+def print_colors() -> None:
     color_pivot = [0]
     color_pivot += [e * 6 + 16 for e in range(37)]
     color_pivot.append(256)
     color_pivot_start = color_pivot[:-1]
     color_pivot_end = color_pivot[1:]
-    color_table = [range(cs, ce) for cs, ce in zip(color_pivot_start, color_pivot_end)]
+    color_table_list = [range(cs, ce) for cs, ce in zip(color_pivot_start, color_pivot_end)]
 
-    for ct in color_table:
+    for color_table in color_table_list:
         text = ""
-        for c in ct:
-            cs = str(c)
-            padding = "".join([" " for e in range(3 - len(cs))])
-            text += colorize(f" {padding!s}{cs!s} ", background_256=c, with_end=False)
+        for color in color_table:
+            color_string = str(color)
+            padding = "".join([" " for e in range(3 - len(color_string))])
+            text += colorize(f" {padding}{color_string} ", background_256=color, with_end=False)
         print(text + colorize("", background=DEFAULT))
 
 
