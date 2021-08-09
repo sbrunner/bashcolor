@@ -24,6 +24,9 @@ jobs:
       - name: Checks
         run: c2cciutils-checks
 
+      - run: pipenv sync --dev
+      - run: pipenv run prospector --output=pylint bashcolor
+
       - name: Init pypi
         run: |
           echo "[pypi]" > ~/.pypirc

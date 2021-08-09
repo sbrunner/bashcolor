@@ -1,0 +1,22 @@
+---
+strictness: veryhigh
+
+max-line-length: 110
+
+pylint:
+  disable:
+    - too-many-arguments
+
+pep8:
+  disable:
+    - E203 # Whitespace before ':'
+    - E722 # Do not use bare 'except'
+
+bandit:
+  run: true
+
+mypy:
+  run: true
+
+mccabe:
+  run: false
