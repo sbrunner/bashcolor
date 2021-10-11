@@ -1,7 +1,7 @@
 ---
 strictness: veryhigh
-
 max-line-length: 110
+doc-warnings: True
 
 pylint:
   disable:
