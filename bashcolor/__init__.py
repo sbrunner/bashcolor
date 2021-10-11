@@ -45,6 +45,19 @@ def colorize(
     background_256: Optional[int] = None,
     with_end: bool = True,
 ) -> str:
+    """
+    Colorize a text.
+
+    Arguments:
+
+        text: the text to be colorize
+        color: the text color code
+        background: the background color code
+        effects: the effect code (BOLD, DIM, UNDERLINE, BLINK, INVERSE, HIDDEN)
+        color_256: The 256 text color code, use print_colors to get the possible values
+        background_256: The 256 background color code, use print_colors to get the possible values
+        with_end: Set to False to don't add the end tag
+    """
     if effects is None:
         effects = []
     start = []
@@ -74,6 +87,7 @@ def colorize(
 
 
 def print_colors() -> None:
+    """Print a small help with all the color."""
     color_pivot = [0]
     color_pivot += [e * 6 + 16 for e in range(37)]
     color_pivot.append(256)
