@@ -8,12 +8,12 @@ pylint:
     - too-many-arguments
     - missing-module-docstring
 
-pep8:
+pycodestyle:
   disable:
     - E203 # Whitespace before ':'
     - E722 # Do not use bare 'except'
 
-pep257:
+pydocstyle:
   disable:
     - D104 # Missing docstring in public package
     - D212 # Multi-line docstring summary should start at the first line
