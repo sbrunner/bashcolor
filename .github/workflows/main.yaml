@@ -24,7 +24,11 @@ jobs:
       - name: Checks
         run: c2cciutils-checks
 
-      - run: pipenv sync --dev
+      - run: >
+          python3 -m pip install --user --requirement=requirements.txt &&
+          poetry export --dev --output=requirements-poetry-dev.txt &&
+          python3 -m pip install --user --requirement=requirements-poetry-dev.txt
+
       - run: pipenv run prospector --output=pylint bashcolor
 
       - name: Init pypi
