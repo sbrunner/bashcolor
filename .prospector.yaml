@@ -27,5 +27,8 @@ bandit:
 mypy:
   run: true
 
+pyroma:
+  run: true
+
 mccabe:
   run: false
