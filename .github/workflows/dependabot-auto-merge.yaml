@@ -2,6 +2,10 @@ name: Auto reviews updates
 
 on:
   pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
   workflow_run:
     workflows:
       - None
@@ -19,4 +23,4 @@ jobs:
         uses: golfzaptw/action-auto-reviews-from-branches@master
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          AUTHOR: renovate-bot
+          AUTHOR: renovate[bot]
