@@ -42,7 +42,7 @@ prospector = { version = "1.7.7", extras = [
   "with_mypy",
   "with_pyroma"
 ] }
-flake8 = "4.0.1"
+flake8 = "5.0.4"
 
 [build-system]
 requires = [
