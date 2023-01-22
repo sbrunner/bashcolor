@@ -18,6 +18,7 @@ readme = "README.md"
 authors = ["Stéphane Brunner <stephane.brunner@gmail.com>"]
 homepage = "https://hub.docker.com/r/sbrunner/bashcolor/"
 repository = "https://github.com/sbrunner/bashcolor"
+license = "BSD-2-Clause"
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Developers",
