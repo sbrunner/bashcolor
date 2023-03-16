@@ -51,3 +51,12 @@ def colorize(
     background_256=None,
     with_end=True):
 ```
+
+## Contributing
+
+Install the pre-commit hooks:
+
+```bash
+pip install pre-commit
+pre-commit install --allow-missing-config
+```
