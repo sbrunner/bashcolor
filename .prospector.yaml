@@ -1,7 +1,8 @@
----
+inherits:
+  - duplicated
 strictness: veryhigh
 max-line-length: 110
-doc-warnings: True
+doc-warnings: true
 
 pylint:
   disable:
@@ -10,7 +11,6 @@ pylint:
 
 pycodestyle:
   disable:
-    - E203 # Whitespace before ':'
     - E722 # Do not use bare 'except'
 
 pydocstyle:
@@ -19,8 +19,6 @@ pydocstyle:
     - D212 # Multi-line docstring summary should start at the first line
     - D407 # Missing dashed underline after section ('Arguments')
     - D412 # No blank lines allowed between a section header and its content ('Arguments')
-    - D413 # Missing blank line after last section ('Arguments')
-
 bandit:
   run: true
 
