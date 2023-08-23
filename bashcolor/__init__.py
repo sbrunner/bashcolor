@@ -1,7 +1,7 @@
 # see also: http://misc.flogisoft.com/bash/tip_colors_and_formatting
 
 
-from typing import List, Optional
+from typing import Optional
 
 RESET = 0
 BLACK = 30
@@ -40,7 +40,7 @@ def colorize(
     text: str,
     color: Optional[int] = None,
     background: Optional[int] = None,
-    effects: Optional[List[int]] = None,
+    effects: Optional[list[int]] = None,
     color_256: Optional[int] = None,
     background_256: Optional[int] = None,
     with_end: bool = True,
