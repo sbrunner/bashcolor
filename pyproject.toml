@@ -36,11 +36,10 @@ print_colors = "bashcolor:print_colors"
 [tool.poetry.dependencies]
 python = ">=3.9,<3.13"
 
-[tool.poetry.dev-dependencies]
-prospector = { version = "1.12.1", extras = ["with_bandit", "with_mypy", "with_pyroma"] }
-
 [tool.poetry.group.dev.dependencies]
+prospector = { version = "1.12.1", extras = ["with_bandit", "with_mypy", "with_pyroma"] }
 prospector-profile-duplicated = "1.6.0"
+prospector-profile-utils = "1.9.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "poetry-plugin-tweak-dependencies-version", "poetry-dynamic-versioning", "poetry-plugin-drop-python-upper-constraint"]

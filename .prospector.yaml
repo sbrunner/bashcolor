@@ -1,32 +1,4 @@
 inherits:
+  - utils:base
+  - utils:no-design-checks
   - duplicated
-strictness: veryhigh
-max-line-length: 110
-doc-warnings: true
-
-pylint:
-  disable:
-    - too-many-arguments
-    - missing-module-docstring
-
-pycodestyle:
-  disable:
-    - E722 # Do not use bare 'except'
-
-pydocstyle:
-  disable:
-    - D104 # Missing docstring in public package
-    - D212 # Multi-line docstring summary should start at the first line
-    - D407 # Missing dashed underline after section ('Arguments')
-    - D412 # No blank lines allowed between a section header and its content ('Arguments')
-bandit:
-  run: true
-
-mypy:
-  run: true
-
-pyroma:
-  run: true
-
-mccabe:
-  run: false

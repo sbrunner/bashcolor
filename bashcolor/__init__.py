@@ -1,3 +1,9 @@
+"""
+A simple module to colorize text in the terminal.
+
+This module provides a simple way to colorize text in the terminal.
+"""
+
 # see also: http://misc.flogisoft.com/bash/tip_colors_and_formatting
 
 
@@ -49,14 +55,14 @@ def colorize(
     Colorize a text.
 
     Arguments:
-
-        text: the text to be colorize
-        color: the text color code
-        background: the background color code
-        effects: the effect code (BOLD, DIM, UNDERLINE, BLINK, INVERSE, HIDDEN)
-        color_256: The 256 text color code, use print_colors to get the possible values
-        background_256: The 256 background color code, use print_colors to get the possible values
-        with_end: Set to False to don't add the end tag
+    ---------
+    text: the text to be colorize
+    color: the text color code
+    background: the background color code
+    effects: the effect code (BOLD, DIM, UNDERLINE, BLINK, INVERSE, HIDDEN)
+    color_256: The 256 text color code, use print_colors to get the possible values
+    background_256: The 256 background color code, use print_colors to get the possible values
+    with_end: Set to False to don't add the end tag
     """
     if effects is None:
         effects = []
