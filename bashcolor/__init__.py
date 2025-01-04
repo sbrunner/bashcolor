@@ -1,4 +1,5 @@
-"""A simple module to colorize text in the terminal.
+"""
+A simple module to colorize text in the terminal.
 
 This module provides a simple way to colorize text in the terminal.
 """
@@ -50,7 +51,8 @@ def colorize(
     background_256: Optional[int] = None,
     with_end: bool = True,
 ) -> str:
-    """Colorize a text.
+    """
+    Colorize a text.
 
     Arguments:
     ---------
