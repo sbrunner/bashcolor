@@ -6,7 +6,6 @@ This module provides a simple way to colorize text in the terminal.
 
 # see also: http://misc.flogisoft.com/bash/tip_colors_and_formatting
 
-
 from typing import Optional
 
 RESET = 0
