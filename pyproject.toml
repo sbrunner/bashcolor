@@ -6,31 +6,7 @@ line-length = 110
 convention = "numpy"
 
 [tool.poetry]
-name = "bashcolor"
 version = "0.0.0"
-description = "A simple library to get colors in the bash terminal"
-readme = "README.md"
-authors = ["Stéphane Brunner <stephane.brunner@gmail.com>"]
-homepage = "https://hub.docker.com/r/sbrunner/bashcolor/"
-repository = "https://github.com/sbrunner/bashcolor"
-license = "BSD-2-Clause"
-classifiers = [
-    'Development Status :: 5 - Production/Stable',
-    'Intended Audience :: Developers',
-    'License :: OSI Approved :: BSD License',
-    'Operating System :: OS Independent',
-    'Programming Language :: Python',
-    'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.9',
-    'Programming Language :: Python :: 3.10',
-    'Programming Language :: Python :: 3.11',
-    'Programming Language :: Python :: 3.12',
-    'Typing :: Typed',
-]
-packages = [{ include = "bashcolor" }, { include = "bashcolor/py.typed" }]
-
-[tool.poetry.scripts]
-print_colors = "bashcolor:print_colors"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.13"
@@ -58,6 +34,36 @@ format-jinja = """
 {{serialize_pep440(bump_version(base), dev=distance)}}
 {%- endif -%}
 """
+
+[project]
+dynamic = ["dependencies", "version"]
+name = "bashcolor"
+description = "A simple library to get colors in the bash terminal"
+readme = "README.md"
+license = "BSD-2-Clause"
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: BSD License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Typing :: Typed',
+]
+authors = [{name = "Stéphane Brunner",email = "stephane.brunner@gmail.com"}]
+packages = [{ include = "bashcolor" }, { include = "bashcolor/py.typed" }]
+
+[project.urls]
+homepage = "https://hub.docker.com/r/sbrunner/bashcolor/"
+repository = "https://github.com/sbrunner/bashcolor"
+"Bug Tracker" = "https://github.com/sbrunner/bashcolor/issues"
+
+[project.scripts]
+print_colors = "bashcolor:print_colors"
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "poetry-plugin-tweak-dependencies-version", "poetry-dynamic-versioning", "poetry-plugin-drop-python-upper-constraint"]
