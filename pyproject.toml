@@ -9,7 +9,7 @@ convention = "numpy"
 version = "0.0.0"
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.13"
+python = ">=3.9,<3.14"
 
 [tool.poetry.group.dev.dependencies]
 prospector = { version = "1.16.1", extras = ["with_bandit", "with_mypy", "with_pyroma", "with_ruff"] }
@@ -52,10 +52,12 @@ classifiers = [
     'Programming Language :: Python :: 3.10',
     'Programming Language :: Python :: 3.11',
     'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
     'Typing :: Typed',
 ]
 authors = [{name = "Stéphane Brunner",email = "stephane.brunner@gmail.com"}]
 packages = [{ include = "bashcolor" }, { include = "bashcolor/py.typed" }]
+requires-python = ">=3.9"
 
 [project.urls]
 homepage = "https://hub.docker.com/r/sbrunner/bashcolor/"
