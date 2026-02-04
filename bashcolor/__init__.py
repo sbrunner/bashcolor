@@ -43,11 +43,11 @@ _RESET_EFFECT = 20
 
 def colorize(
     text: str,
-    color: Optional[int] = None,
-    background: Optional[int] = None,
-    effects: Optional[list[int]] = None,
-    color_256: Optional[int] = None,
-    background_256: Optional[int] = None,
+    color: int | None = None,
+    background: int | None = None,
+    effects: list[int] | None = None,
+    color_256: int | None = None,
+    background_256: int | None = None,
     with_end: bool = True,
 ) -> str:
     """
