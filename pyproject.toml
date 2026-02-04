@@ -23,7 +23,7 @@ version = "0.0.0"
 python = ">=3.9,<3.14"
 
 [tool.poetry.group.dev.dependencies]
-prospector = { version = "1.17.3", extras = ["with_bandit", "with_mypy", "with_pyroma", "with_ruff"] }
+prospector = { version = "1.18.0", extras = ["with_bandit", "with_mypy", "with_pyroma", "with_ruff"] }
 prospector-profile-duplicated = "1.11.0"
 prospector-profile-utils = "1.26.5"
 
