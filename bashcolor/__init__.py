@@ -6,8 +6,6 @@ This module provides a simple way to colorize text in the terminal.
 
 # see also: http://misc.flogisoft.com/bash/tip_colors_and_formatting
 
-from typing import Optional
-
 RESET = 0
 BLACK = 30
 RED = 31
@@ -99,7 +97,7 @@ def print_colors() -> None:
     color_pivot.append(256)
     color_pivot_start = color_pivot[:-1]
     color_pivot_end = color_pivot[1:]
-    color_table_list = [range(cs, ce) for cs, ce in zip(color_pivot_start, color_pivot_end)]
+    color_table_list = [range(cs, ce) for cs, ce in zip(color_pivot_start, color_pivot_end, strict=False)]
 
     for color_table in color_table_list:
         text = ""
