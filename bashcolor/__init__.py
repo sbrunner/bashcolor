@@ -1,3 +1,5 @@
+# Copyright (c) 2016-2026, Stéphane Brunner
+
 """
 A simple module to colorize text in the terminal.
 
