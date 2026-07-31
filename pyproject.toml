@@ -79,5 +79,5 @@ repository = "https://github.com/sbrunner/bashcolor"
 print_colors = "bashcolor:print_colors"
 
 [build-system]
-requires = ["poetry-core==2.4.0", "poetry-dynamic-versioning==1.10.0"]
+requires = ["poetry-core==2.4.1", "poetry-dynamic-versioning==1.10.0"]
 build-backend = "poetry.core.masonry.api"
