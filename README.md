@@ -34,9 +34,9 @@
 ```python
 from bashcolor import RED, UNDERLINE, colorize
 
-print(colorize('Red color', RED))
-print(colorize('Red background', background=RED))
-print(colorize('Underline', effects=[UNDERLINE]))
+print(colorize("Red color", RED))
+print(colorize("Red background", background=RED))
+print(colorize("Underline", effects=[UNDERLINE]))
 ```
 
 ## API
